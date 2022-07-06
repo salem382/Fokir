@@ -4,5 +4,6 @@
 
 https://salem382.github.io/Fokir/
 
-[<img src="#1572B6" height="100" />]
-
+<a href="#" target="blank"><img align="center" src="../images/html-5.png" height="100" /></a>
+<a href="#" target="blank"><img align="center" src="../images/css.png" height="100" /></a>
+<a href="#" target="blank"><img align="center" src="../images/js.png" height="100" /></a>
