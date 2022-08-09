@@ -11,7 +11,7 @@ function openMenu () {
 
     myNav.style.height = 'auto';
     myLinks2.style.height = '350px';
-    myLinks2.classList.toggle('close');
+    myLinks2.classList.remove('close');
 }
 
 function closeMenu () {
@@ -22,6 +22,7 @@ function closeMenu () {
         myNav.style.height = '70px';
     },250)
 }
+
 function playMenu () {
 
     myMenu.onclick = function () {
@@ -44,11 +45,11 @@ var allSections = Array.from (document.querySelectorAll('.main-sec')),
 
 function sectionMoving (myBtns) {
 
-    myBtns.forEach((ele, ind) => {
+    myBtns.forEach((ele) => {
 
         ele.onclick = function () {
         closeMenu ();
-        removeActive (myBtns) ;
+        removeActive (myBtns);
         ele.classList.add ('active');
         }
     })
@@ -84,22 +85,22 @@ function addNavBackground () {
         myNav.classList.remove ('change-nav-back');   
     }
 }
+
 function appearanceNav () {
-
-
-    addNavBackground ();    
+   
     var st = window.pageYOffset; 
 
-   if (st > lastScrollTop){
+    if (st > lastScrollTop){
         myNav.style.top = '-' + myNav.offsetHeight + 'px';
-   } else {
-       myNav.style.top = 0;
-   }
-   lastScrollTop = st <= 0 ? 0 : st;
+    } else {
+        myNav.style.top = 0;
+    }
+    lastScrollTop = st <= 0 ? 0 : st;
 }
 
 window.addEventListener("scroll", function(){ 
 
+    addNavBackground (); 
     appearanceNav () ;
     playCountNumbers ();
     addActiveBtns (navBtns1); 
@@ -136,7 +137,7 @@ function addSlideActive (clkBtn) {
 }
 
 
-galleryBtns.forEach ((ele, ind)=> {
+galleryBtns.forEach ((ele)=> {
 
     ele.onclick = _=> {
 
@@ -149,21 +150,7 @@ galleryBtns.forEach ((ele, ind)=> {
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* start important */
-
 
 var importantContainer = document.querySelector ('.my-important'),
     item1 = document.querySelector ('.my-important .item:first-of-type h3'),
